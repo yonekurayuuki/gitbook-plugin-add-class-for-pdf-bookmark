@@ -13,18 +13,18 @@ module.exports = {
           h1 += 1;
           h2 = 0;
           h3 = 0;
-          $('<span style="visibility: hidden;" class="book-chapter book-chapter-1">' + h1 + '. ' +$(h).text() + '</span>').insertBefore($(h));
+          $('<span style="visibility: hidden; display: none;" class="book-chapter book-chapter-1">' + h1 + '. ' +$(h).text() + '</span>').insertBefore($(h));
         }
 
         if($(h).get(0).tagName == 'h2'){
           h2 += 1;
           h3 = 0;
-          $('<span style="visibility: hidden;" class="book-chapter book-chapter-2">' + h1 + '.' + h2 + '. ' +$(h).text() + '</span>').insertBefore($(h));
+          $('<span style="visibility: hidden; display: none;" class="book-chapter book-chapter-2">' + h1 + '.' + h2 + '. ' +$(h).text() + '</span>').insertBefore($(h));
         }
 
         if($(h).get(0).tagName == 'h3'){
           h3 += 1;
-          $('<span style="visibility: hidden;" class="book-chapter-3">' + h1 + '.' + h2 + '.' +h3 + '. ' + $(h).text() + '</span>').insertBefore($(h));
+          $('<span style="visibility: hidden; display: none;" class="book-chapter-3">' + h1 + '.' + h2 + '.' +h3 + '. ' + $(h).text() + '</span>').insertBefore($(h));
         }
 
       });
