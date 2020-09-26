@@ -17,7 +17,7 @@ module.exports = {
           h4 = 0;
           $('<span style="visibility: hidden;" class="book-chapter book-chapter-1">' + h1 + '. ' +$(h).text() + '</span>').insertBefore($(h));
         }
-        // if (this.options.pluginsConfig['depth'] === 1) return true;
+        if(this.options.pluginsConfig['depth'] === 1) return true;
 
         if($(h).get(0).tagName == 'h2'){
           h2 += 1;
@@ -25,14 +25,14 @@ module.exports = {
           h4 = 0;
           $('<span style="visibility: hidden;" class="book-chapter book-chapter-2">' + h1 + '.' + h2 + '. ' +$(h).text() + '</span>').insertBefore($(h));
         }
-        // if (this.options.pluginsConfig['depth'] === 2) return true;
+        if(this.options.pluginsConfig['depth'] === 2) return true;
 
         if($(h).get(0).tagName == 'h3'){
           h3 += 1;
           h4 = 0;
           $('<span style="visibility: hidden;" class="book-chapter-3">' + h1 + '.' + h2 + '.' +h3 + '. ' + $(h).text() + '</span>').insertBefore($(h));
         }
-        // if (this.options.pluginsConfig['depth'] === 3) return true;
+        if(this.options.pluginsConfig['depth'] === 3) return true;
 
         if($(h).get(0).tagName == 'h4'){
           h4 += 1;
